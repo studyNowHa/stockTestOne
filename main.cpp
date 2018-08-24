@@ -41,12 +41,12 @@ bool compareStock(const structStock &stock_data1, const structStock &stock_data2
 void qdebugStock(){
     w->view->setUpdatesEnabled(false);
     for(int i=0; i<stock_vector_global->size(); i++){
-        qDebug()<<stock_vector_global->at(i).stock_num<<stock_vector_global->at(i).stock_uplift_percent<<QString::number(i*1024%9);
         model.setItem(i,0,new QStandardItem(stock_vector_global->at(i).stock_num));
         model.setItem(i,1,new QStandardItem(stock_vector_global->at(i).stock_uplift_percent));
         qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
         int a =qrand()%9;
         model.setItem(i,2,new QStandardItem(QString::number(a)));
+//        qDebug()<<stock_vector_global->at(i).stock_num<<stock_vector_global->at(i).stock_uplift_percent<<a;
     }
     w->view->setUpdatesEnabled(true);
 }
