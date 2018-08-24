@@ -27,12 +27,19 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     globalstock.cpp \
-    structstock.cpp
+    structstock.cpp \
+    threadstock.cpp \
+    stockwatchthread.cpp \
+    stockthread.cpp
 
 HEADERS += \
         mainwindow.h \
     globalstock.h \
-    structstock.h
+    structstock.h \
+    threadstock.h \
+    stockwatchthread.h \
+    stockthread.h \
+    main.h
 
 FORMS += \
         mainwindow.ui

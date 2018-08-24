@@ -4,6 +4,7 @@
 #include <QTableView>
 #include <QMainWindow>
 #include <QStandardItemModel>
+#include <QDebug>
 
 extern QStandardItemModel model;
 
@@ -23,6 +24,7 @@ private:
     Ui::MainWindow *ui;
 public:
     QTableView *view = new QTableView;
+    QStandardItemModel models;
 signals:
     void updateTableSignal();
 public slots:

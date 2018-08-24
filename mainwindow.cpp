@@ -1,13 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent) /*:
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow)*/
 {
-    ui->setupUi(this);
+//    ui->setupUi(this);
     connect(this,updateTableSignal,this,updateTableSlot);
-    view->setModel(&model);
+    view->setModel(&models);
     view->show();
 }
 
@@ -19,5 +19,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::updateTableSlot()
 {
-        view->setUpdatesEnabled(true);
+    view->setUpdatesEnabled(false);
+    view->setUpdatesEnabled(true);
 }
